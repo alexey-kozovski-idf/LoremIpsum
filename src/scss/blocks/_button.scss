@@ -1,0 +1,56 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: $transition-default;
+    min-width: 180px;
+    
+    @include mobile {
+        width: 100%;
+    }
+    
+    &--primary {
+        background-color: $color-primary;
+        color: $color-white;
+        border: 1px solid $color-white;
+        
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+    
+    &--outline {
+        background-color: $color-white;
+        color: $color-dark;
+        border: 1px solid $color-primary;
+        
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+    
+    &--full {
+        width: 100%;
+        max-width: 370px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+    
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+    
+    &:active {
+        transform: translateY(1px);
+    }
+} 

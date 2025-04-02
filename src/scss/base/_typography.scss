@@ -1,0 +1,44 @@
+// Base text styles
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+// Headings
+.title {
+    &--h1 {
+        @include h1;
+    }
+    
+    &--h2 {
+        @include h2;
+    }
+    
+    &--white {
+        color: $color-white;
+    }
+    
+    &--center {
+        text-align: center;
+    }
+}
+
+// Text modifiers
+.text {
+    &--primary {
+        color: $color-primary;
+    }
+    
+    &--gray {
+        color: $color-gray;
+    }
+    
+    &--center {
+        text-align: center;
+    }
+    
+    &--uppercase {
+        text-transform: uppercase;
+    }
+} 
